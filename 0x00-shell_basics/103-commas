@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1afpv | sed ':a;N;$!ba;s/\n/, /g' | sed 's/\(.*\)\/$/\1\//g' | sed -E 's/^([[:digit:]]*)([[:alpha:]]*)/\1 \2/g' | sort -n -t' ' -k1 | sed 's/, $/\n/'
+ls -1ap | sort -d | tr '\n' ', \n'; echo 
