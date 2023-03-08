@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1ap | sort -d | tr '\n' ', \n'; echo 
+ls -xamp 
