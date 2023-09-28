@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+
+passwd_file="/etc/passwd"
+
+while IFS=: read -r username _ userid _ _ home _; do
+    echo "$username:$userid:$home"
+done < "$passwd_file"
