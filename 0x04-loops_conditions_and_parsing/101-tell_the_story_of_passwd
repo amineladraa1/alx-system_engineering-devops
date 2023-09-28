@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+
+passwd_file="/etc/passwd"
+
+while IFS=: read username password uid gid info home shell; do
+    echo "The user $username is part of the group $gid gang,"
+    echo "lives in $home and rides $shell."
+    echo "$uid's place is protected by the passcode $password,"
+    echo "more info about the user here: $info"
+done < "$passwd_file"
