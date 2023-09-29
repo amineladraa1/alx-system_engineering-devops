@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script stops 7-highlander process
+
+handle_sigterm() {
+    echo "I am invincible!!!"
+    pkill -x "7-highlander"
+    exit 0
+}
+
+trap 'handle_sigterm' SIGTERM
+
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
