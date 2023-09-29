@@ -5,4 +5,6 @@ target_proc="4-to_infinity_and_beyond"
 
 if pkill -x "$target_proc"; then
 	echo "terminated"
+else
+	echo "$target_process not found."
 fi
