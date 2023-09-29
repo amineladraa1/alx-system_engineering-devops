@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script stops 4-to_infinity_and_beyond process
+
+target_proc="4-to_infinity_and_beyond"
+
+if pkill -x "$target_proc"; then
+	echo "terminated"
+fi
