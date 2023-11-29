@@ -1,3 +1,16 @@
 #!/usr/bin/env bash
 # fixes an apache server in a container
-sudo service apache2 start
+#sudo service apache2 start
+docker exec -it <container_id> /bin/bash
+
+# Navigate to the Apache web root directory
+cd /var/www/html
+
+# Create or modify the index.html file with "Hello Holberton" content
+echo "Hello Holberton" > index.html
+
+# Restart the Apache server
+service apache2 restart
+
+# Exit the container
+exit
