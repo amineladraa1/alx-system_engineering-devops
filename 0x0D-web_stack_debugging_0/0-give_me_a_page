@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 # fixes an apache server in a container
 sudo service apache2 start
+
+# Check if Apache service is running
+if sudo service apache2 status | grep -q "apache2 is running"; then
+    echo "apache2 is running"
+else
+    echo "Error: Apache service did not start successfully"
+fi
