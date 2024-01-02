@@ -23,6 +23,8 @@ if __name__ == "__main__":
     json_req = employee.json()
     name = employeeName.json()['name']
 
+    print(name)
+
     totalTasks = 0
 
     for done_tasks in json_req:
